@@ -46,7 +46,6 @@ autocmd FileType gitcommit setlocal spell spelllang=en_us,de_de
 "setlocal spell spelllang=en_us,de_de
 autocmd FileType markdown setlocal complete+=kspell spelllang=en_us,de_de
 autocmd FileType gitcommit setlocal complete+=kspell spelllang=en_us,de_de
-
 set number relativenumber
 set textwidth=80
 set colorcolumn=80
@@ -86,6 +85,13 @@ let g:go_highlight_operators = 1
 let g:go_highlight_extra_types = 1
 let g:go_highlight_build_constraints = 1
 let g:go_highlight_generate_tags = 1
+
+"NERDTree
+nmap <C-f> :NERDTreeToggle<CR>
+autocmd VimEnter * NERDTree | wincmd p
+" Exit Vim if NERDTree is the only window remaining in the only tab.
+autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() | quit | endif
+
 
 " Source Custom Configs
 source $HOME/.config/nvim/extra.vim
