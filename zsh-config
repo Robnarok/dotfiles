@@ -75,6 +75,7 @@ plugins=(
     docker
     docker-compose
     git-open
+    web-search
 )
 
 zstyle :omz:plugins:ssh-agent helper ksshaskpass
@@ -83,3 +84,5 @@ source $ZSH/oh-my-zsh.sh
 alias vim="nvim"
 alias ssh="TERM=xterm-256color ssh"
 export EDITOR=nvim
+fortune -sc | cowsay -f /usr/share/cowsay/cows/small.cow
+
