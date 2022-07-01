@@ -11,3 +11,6 @@ touch $HOME/.config/nvim/extra.vim
 
 # zshrc
 ln -f ./zsh-config $HOME/.zshrc
+
+#tmux
+ln -f ./tmux.conf $HOME/.tmux.conf
