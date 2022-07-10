@@ -1,3 +1,4 @@
+# vim: filetype=i3config
 # Set Variables
 set $mod Mod4
 set $dmenu rofi -matching fuzzy -show-icons -markup -tokenize -show drun --dmenu
@@ -17,8 +18,7 @@ set $ws9 "9"
 set $ws10 "10"
 ## End of Variables
 
-exec --no-startup-id dex --autostart --environment i3
-exec feh --randomize --bg-fill ~/Wallpaper/*   
+exec --no-startup-id dex --autostart --environment i3 exec feh --randomize --bg-fill ~/Wallpaper/*   
 
 # The combination of xss-lock, nm-applet and pactl is a popular choice, so
 # they are included here as an example. Modify as you see fit.
@@ -226,14 +226,13 @@ bar {
         binding_mode       #2f343a #900000   #ffffff
     }
 
-   font pango:Inconsolata 10
-	tray_output primary
+   font pango:Fontawesome, Droid Sans Mono 11
+   tray_output primary
 	position top
-	status_command /home/robin/.local/bin/bumblebee-status \
+	status_command $HOME/.local/bin/bumblebee-status \
         -m nic disk:root cpu memory time pasink pasource \
  	    -p nic.states=up root.path=/ time.format="%H:%M"\
-	    -t iceberg
+	    -t nord-powerline
 }
 exec i3-dump-log >> ~/.i3-dump-log.txt
 
-# vim: filetype=i3config

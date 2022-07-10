@@ -101,3 +101,4 @@ fortune -sc | cowsay -f /usr/share/cowsay/cows/small.cow
                 export PYTHONIOENCODING=$TF_PYTHONIOENCODING;
                 test -n "$TF_CMD" && print -s $TF_CMD
             }
+source ~/.fonts/*.sh

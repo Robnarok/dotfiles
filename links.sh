@@ -2,15 +2,15 @@
 
 # I3
 mkdir -p $HOME/.config/i3
-ln -f ./i3-config $HOME/.config/i3/config
+ln -s $PWD/i3-config $HOME/.config/i3/config
 
 # Nvim
 mkdir -p $HOME/.config/nvim
-ln -f ./vim-config.vim $HOME/.config/nvim/init.vim
+ln -s $PWD/vim-config.vim $HOME/.config/nvim/init.vim
 touch $HOME/.config/nvim/extra.vim
 
 # zshrc
-ln -f ./zsh-config $HOME/.zshrc
+ln -s $PWD/zsh-config $HOME/.zshrc
 
 #tmux
-ln -f ./tmux.conf $HOME/.tmux.conf
+ln -s $PWD/tmux.conf $HOME/.tmux.conf

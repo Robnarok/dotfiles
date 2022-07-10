@@ -6,7 +6,7 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'sainnhe/everforest'
 Plug 'NLKNguyen/Papercolor-theme'
 Plug 'sainnhe/sonokai'
-
+Plug 'mboughaba/i3config.vim'
 Plug 'preservim/nerdtree'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
