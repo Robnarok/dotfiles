@@ -17,3 +17,10 @@ ln -s $PWD/tmux.conf $HOME/.tmux.conf
 
 #qtile
 ln -s $PWD/qtile $HOME/.config/.
+
+#rofi
+ln -s $PWD/rofi $HOME/.config/.
+
+#alacritty
+ln -s $PWD/alacritty $HOME/.config/.
+

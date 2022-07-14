@@ -48,9 +48,8 @@ terminal = "alacritty"
 keys = [
     Key([mod], "d", lazy.spawn("rofi -show combi"), desc="Rofi Menu"),
     Key([mod], "a", lazy.spawn("rofimoji -s neutral -a copy"), desc="Rofimoji"),
-    Key([mod], "w", lazy.to_screen(0)),
-    Key([mod], "e", lazy.to_screen(1)),
-    # A list of available commands that can be bound to keys can be found
+    Key([mod], 'w', lazy.next_screen(), desc='Next monitor'),
+    Key([mod], 'e', lazy.next_screen(), desc='Previus monitor'),
     # at https://docs.qtile.org/en/latest/manual/config/lazy.html
     # Switch between windows
     Key([mod], "j", lazy.layout.up(), desc="Move focus up"),
@@ -152,15 +151,11 @@ screens = [
                     name_transform=lambda name: name.upper(),
                 ),
                 widget.TextBox("default config", name="default"),
-                # NB Systray is incompatible with Wayland, consider using StatusNotifier instead
-                # widget.StatusNotifier(),
                 widget.Systray(),
                 widget.Clock(format="%Y-%m-%d | %H:%M:%S | %s"),
                 widget.QuickExit(),
             ],
-            24,
-            # border_width=[2, 0, 2, 0],  # Draw top and bottom borders
-            # border_color=["ff00ff", "000000", "ff00ff", "000000"]  # Borders are magenta
+            30,
         ),
     ),
 ]
