@@ -14,3 +14,6 @@ ln -s $PWD/zsh-config $HOME/.zshrc
 
 #tmux
 ln -s $PWD/tmux.conf $HOME/.tmux.conf
+
+#qtile
+ln -s $PWD/qtile $HOME/.config/.
