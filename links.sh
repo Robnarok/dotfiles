@@ -1,12 +1,10 @@
 #!/bin/bash
 
 # I3
-mkdir -p $HOME/.config/i3
-ln -s $PWD/i3-config $HOME/.config/i3/config
+ln -s $PWD/i3 $HOME/.config/.
 
 # Nvim
-mkdir -p $HOME/.config/nvim
-ln -s $PWD/vim-config.vim $HOME/.config/nvim/init.vim
+ln -s $PWD/nvim $HOME/.config/.
 touch $HOME/.config/nvim/extra.vim
 
 # zshrc
@@ -23,4 +21,10 @@ ln -s $PWD/rofi $HOME/.config/.
 
 #alacritty
 ln -s $PWD/alacritty $HOME/.config/.
+
+#xmonad
+ln -s $PWD/xmonad $HOME/.config/.
+
+#xmobar
+ln -s $PWD/xmobar $HOME/.config/.
 
