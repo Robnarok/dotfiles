@@ -130,6 +130,7 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     -- Deincrement the number of windows in the master area
     , ((modm              , xK_period), sendMessage (IncMasterN (-1)))
 
+    , ((modm .|. shiftMask, xK_l), spawn "slock")
 
     , ((modm .|. shiftMask, xK_p     ), io (exitWith ExitSuccess))
 
@@ -178,7 +179,8 @@ myEventHook = mempty
 
 myStartupHook = do
     spawnOnce "feh --randomize --bg-fill ~/Wallpaper/*"
-
+    spawnOnce "/usr/bin/mate-power-manager"
+    spawnOnce "xss-lock --transfer-sleep-lock slock --nofork"
 
 ------------------------------------------------------------------------
 -- Now run xmonad with all the defaults we set up.
