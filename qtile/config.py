@@ -48,6 +48,7 @@ terminal = "alacritty"
 keys = [
     Key([mod], "d", lazy.spawn("rofi -show combi"), desc="Rofi Menu"),
     Key([mod], "a", lazy.spawn("rofimoji -s neutral -a copy"), desc="Rofimoji"),
+    Key([mod, "control"], "0", lazy.spawn("xrandr --auto"),desc="xrandr Auto"),
     Key([mod], 'w', lazy.next_screen(), desc='Next monitor'),
     Key([mod], 'e', lazy.next_screen(), desc='Previus monitor'),
     # at https://docs.qtile.org/en/latest/manual/config/lazy.html
@@ -74,7 +75,7 @@ keys = [
     Key([mod], "Tab", lazy.next_layout(), desc="Toggle between layouts"),
     Key([mod, "shift"] ,"c", lazy.window.kill(), desc="Kill focused window"),
     Key([mod, "control"], "r", lazy.reload_config(), desc="Reload the config"),
-    Key([mod, "control"], "q", lazy.shutdown(), desc="Shutdown Qtile"),
+    Key([mod, "control"], "q", lazy.spawn("rofi -show power-menu -modi power-menu:rofi-power-menu"), desc="Rofi Power Menu"),
 ]
 
 
@@ -131,8 +132,10 @@ layouts = [
 
 widget_defaults = dict(
     font="Hack Nerd Font",
+    fmt="{}",
     fontsize=14,
-    padding=3,
+    padding=8,
+    background="#2e3440",
 )
 extension_defaults = widget_defaults.copy()
 
@@ -141,21 +144,47 @@ screens = [
         top=bar.Bar(
             [
                 widget.CurrentLayout(),
-                widget.GroupBox(),
+                widget.GroupBox(
+                    hide_unused=True),
+                widget.WindowCount(
+                    foreground="#A3BE8C"),
                 widget.Prompt(),
-                widget.WindowName(),
+                widget.WindowName(
+                    max_chars=40),
                 widget.Chord(
                     chords_colors={
                         "launch": ("#ff0000", "#ffffff"),
                     },
                     name_transform=lambda name: name.upper(),
                 ),
-                widget.TextBox("default config", name="default"),
+                widget.CheckUpdates(
+                    foreground="#B48EAD",
+                    colour_no_updates="#B48EAD",
+                    colour_have_updates="#B48EAD",
+                    no_update_string='No updates',
+                    distro="fedora",
+                    execute="dnf check-update"
+                    ),
+                widget.CPU(
+                    foreground="#81A1C1"),
+                widget.Memory(
+                    foreground="#8FBCBB"),
+                widget.Wttr(
+                    location={'Düsseldorf':'Düsseldorf'},
+                    foreground="#A3BE8C"
+                ),
+                widget.Clock(
+                    format="%Y-%m-%d | %H:%M:%S | (%s)",
+                    foreground="#EBCB8B"
+                    ),
+                widget.QuickExit(
+                    foreground="#BF616A"),
+                widget.Volume(
+                    emoji=True),
                 widget.Systray(),
-                widget.Clock(format="%Y-%m-%d | %H:%M:%S | %s"),
-                widget.QuickExit(),
             ],
             30,
+            opacity=0.90
         ),
     ),
 ]

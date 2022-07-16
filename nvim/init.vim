@@ -54,7 +54,9 @@ highlight clear CursorLine
 
 set tabstop=4
 set shiftwidth=4
-set softtabstop=0 expandtab	
+set softtabstop=4 
+set expandtab	
+
 
 " Coc Keymappings (Tab = Shift Tab for Scrolling through corretions, Enter to
 " complete)
