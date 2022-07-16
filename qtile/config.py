@@ -112,7 +112,8 @@ layouts = [
     layout.MonadTall(
         font = "Hack Nerd Font",
         fontsize = 12,
-        margin = 8
+        margin = 8,
+        border_focus = '#BF616A',
         ),
     layout.Max(),
     # Try more layouts by unleashing below layouts.
@@ -178,6 +179,7 @@ screens = [
                     foreground="#EBCB8B"
                     ),
                 widget.QuickExit(
+                    default_text='[🔥]',
                     foreground="#BF616A"),
                 widget.Volume(
                     emoji=True),
