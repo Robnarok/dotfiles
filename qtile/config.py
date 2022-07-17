@@ -48,7 +48,6 @@ terminal = "alacritty"
 keys = [
     Key([mod], "d", lazy.spawn("rofi -show combi"), desc="Rofi Menu"),
     Key([mod], "a", lazy.spawn("rofimoji -s neutral -a copy"), desc="Rofimoji"),
-    Key([mod, "control"], "0", lazy.spawn("xrandr --auto"),desc="xrandr Auto"),
     Key([mod], 'w', lazy.next_screen(), desc='Next monitor'),
     Key([mod], 'e', lazy.next_screen(), desc='Previus monitor'),
     # at https://docs.qtile.org/en/latest/manual/config/lazy.html
@@ -57,7 +56,6 @@ keys = [
     Key([mod], "k", lazy.layout.down(), desc="Move focus up"),
     Key([mod, "shift"], "j", lazy.layout.shuffle_up()),
     Key([mod, "shift"], "k", lazy.layout.shuffle_down()),
-   
     Key([mod], "l", lazy.layout.grow(), desc="Grow the Window"),
     Key([mod], "h", lazy.layout.shrink(),desc="Shrink the Window"),
     Key([mod], "n", lazy.layout.normalize(),desc="Normilize the Windw"),
@@ -75,7 +73,35 @@ keys = [
     Key([mod], "Tab", lazy.next_layout(), desc="Toggle between layouts"),
     Key([mod, "shift"] ,"c", lazy.window.kill(), desc="Kill focused window"),
     Key([mod, "control"], "r", lazy.reload_config(), desc="Reload the config"),
-    Key([mod, "control"], "q", lazy.spawn("rofi -show power-menu -modi power-menu:rofi-power-menu"), desc="Rofi Power Menu"),
+    Key([mod, "control"], "0", lazy.spawn("xrandr --auto"),desc="xrandr Auto"),
+    # Rofi Power Menu. Requires https://github.com/jluttine/rofi-power-menu
+    Key([mod, "control"], "q",
+        lazy.spawn("rofi -show power-menu -modi power-menu:rofi-power-menu"),
+        desc="Rofi Power Menu"
+    ),
+
+    #XF86 Keys
+    # Brightness
+    Key([], "XF86MonBrightnessUp", lazy.spawn("brightnessctl s +5%"),
+        desc="Increase Screen Brightness"),
+    Key([], "XF86MonBrightnessDown", lazy.spawn("brightnessctl s 5%- "),
+        desc="Decrease Screen Brightness"),
+    ## Volumen
+    Key([], "XF86AudioMute", lazy.spawn("amixer -q set Master toggle"),
+        desc="Toggle Audio Mute"),
+    Key([], "XF86AudioLowerVolume", lazy.spawn("amixer -q set Master 5%-"),
+        desc="Decrease Audio Volumen"),
+    Key([], "XF86AudioRaiseVolume", lazy.spawn("amixer -q set Master 5%+"),
+        desc="Increase Audio Volumen"),
+    ## Audio
+    Key([], "XF86AudioPlay", lazy.spawn("playerctl play-pause"),
+        desc="Play/Pause"),
+    Key([], "XF86AudioNext", lazy.spawn("playerctl next"), desc="Next Song"),
+    Key([], "XF86AudioPrev", lazy.spawn("playerctl previous"),
+        desc="Previus Song"),
+    Key([], "XF86AudioStop", lazy.spawn("playerctl stop"), desc="Stop Music"),
+
+
 ]
 
 
