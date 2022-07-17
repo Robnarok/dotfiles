@@ -81,7 +81,7 @@ keys = [
     ),
 
     #XF86 Keys
-    # Brightness
+    # Brightness Requires Brightnessctl
     Key([], "XF86MonBrightnessUp", lazy.spawn("brightnessctl s +5%"),
         desc="Increase Screen Brightness"),
     Key([], "XF86MonBrightnessDown", lazy.spawn("brightnessctl s 5%- "),
@@ -93,12 +93,10 @@ keys = [
         desc="Decrease Audio Volumen"),
     Key([], "XF86AudioRaiseVolume", lazy.spawn("amixer -q set Master 5%+"),
         desc="Increase Audio Volumen"),
-    ## Audio
-    Key([], "XF86AudioPlay", lazy.spawn("playerctl play-pause"),
-        desc="Play/Pause"),
+    ## Audio Requires Playerctl
+    Key([], "XF86AudioPlay", lazy.spawn("playerctl play-pause"),desc="Play/Pause"),
     Key([], "XF86AudioNext", lazy.spawn("playerctl next"), desc="Next Song"),
-    Key([], "XF86AudioPrev", lazy.spawn("playerctl previous"),
-        desc="Previus Song"),
+    Key([], "XF86AudioPrev", lazy.spawn("playerctl previous"), desc="Previus Song"),
     Key([], "XF86AudioStop", lazy.spawn("playerctl stop"), desc="Stop Music"),
 
 
