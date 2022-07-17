@@ -87,6 +87,7 @@ nmap <C-f> :NERDTreeToggle<CR>
 " Exit Vim if NERDTree is the only window remaining in the only tab.
 autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() | quit | endif
 
-
+highlight Normal guibg=none
+highlight NonText guibg=none
 " Source Custom Configs
 source $HOME/.config/nvim/extra.vim
