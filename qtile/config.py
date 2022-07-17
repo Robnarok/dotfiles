@@ -180,25 +180,24 @@ screens = [
                 widget.WindowName(
                     max_chars=25),
                 widget.Notify(
-                    background="#00ff00",
-                    foreground="#B48EAD",
+                    background="#B48EAD",
                     default_timeout=5,
                     max_chars=25),
                 widget.CPU(
-                    foreground="#81A1C1"),
+                    background="#81A1C1"),
                 widget.Memory(
-                    foreground="#8FBCBB"),
+                    background="#8FBCBB"),
                 widget.Wttr(
                     location={'Düsseldorf':'Düsseldorf'},
-                    foreground="#A3BE8C"
+                    background="#A3BE8C"
                 ),
                 widget.Clock(
                     format="%Y-%m-%d | %H:%M:%S",
-                    foreground="#EBCB8B"
+                    background="#EBCB8B"
                     ),
                 widget.QuickExit(
                     default_text='[🔥]',
-                    foreground="#BF616A"),
+                    background="#BF616A"),
                 widget.Volume(
                     emoji=True),
                 widget.Systray(),
@@ -225,16 +224,16 @@ screens = [
                     default_timeout=25,
                     max_chars=25),
                 widget.CPU(
-                    foreground="#81A1C1"),
+                    background="#81A1C1"),
                 widget.Memory(
-                    foreground="#8FBCBB"),
+                    background="#8FBCBB"),
                 widget.Wttr(
                     location={'Düsseldorf':'Düsseldorf'},
-                    foreground="#A3BE8C"
+                    background="#A3BE8C"
                 ),
                 widget.Clock(
                     format="%Y-%m-%d | %H:%M:%S | (%s)",
-                    foreground="#EBCB8B"
+                    background="#EBCB8B"
                     ),
             ],
             30,
