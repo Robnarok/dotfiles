@@ -167,6 +167,7 @@ widget_defaults = dict(
 extension_defaults = widget_defaults.copy()
 
 screens = [
+    # Monitor 0
     Screen(
         top=bar.Bar(
             [
@@ -177,21 +178,52 @@ screens = [
                     foreground="#A3BE8C"),
                 widget.Prompt(),
                 widget.WindowName(
-                    max_chars=40),
-                widget.Chord(
-                    chords_colors={
-                        "launch": ("#ff0000", "#ffffff"),
-                    },
-                    name_transform=lambda name: name.upper(),
-                ),
-                widget.CheckUpdates(
+                    max_chars=25),
+                widget.Notify(
+                    background="#00ff00",
                     foreground="#B48EAD",
-                    colour_no_updates="#B48EAD",
-                    colour_have_updates="#B48EAD",
-                    no_update_string='No updates',
-                    distro="fedora",
-                    execute="dnf check-update"
+                    default_timeout=5,
+                    max_chars=25),
+                widget.CPU(
+                    foreground="#81A1C1"),
+                widget.Memory(
+                    foreground="#8FBCBB"),
+                widget.Wttr(
+                    location={'Düsseldorf':'Düsseldorf'},
+                    foreground="#A3BE8C"
+                ),
+                widget.Clock(
+                    format="%Y-%m-%d | %H:%M:%S",
+                    foreground="#EBCB8B"
                     ),
+                widget.QuickExit(
+                    default_text='[🔥]',
+                    foreground="#BF616A"),
+                widget.Volume(
+                    emoji=True),
+                widget.Systray(),
+            ],
+            30,
+            opacity=0.90
+        ),
+    ),
+    # Secondary Screen (xrandr --listmonitors)
+    Screen(
+        top=bar.Bar(
+            [
+                widget.CurrentLayout(),
+                widget.GroupBox(
+                    hide_unused=True),
+                widget.WindowCount(
+                    foreground="#A3BE8C"),
+                widget.Prompt(),
+                widget.WindowName(
+                    max_chars=25),
+                widget.Notify(
+                    background="#B48EAD",
+                    foreground="#ffffff",
+                    default_timeout=25,
+                    max_chars=25),
                 widget.CPU(
                     foreground="#81A1C1"),
                 widget.Memory(
@@ -204,12 +236,6 @@ screens = [
                     format="%Y-%m-%d | %H:%M:%S | (%s)",
                     foreground="#EBCB8B"
                     ),
-                widget.QuickExit(
-                    default_text='[🔥]',
-                    foreground="#BF616A"),
-                widget.Volume(
-                    emoji=True),
-                widget.Systray(),
             ],
             30,
             opacity=0.90
