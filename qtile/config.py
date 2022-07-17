@@ -189,11 +189,18 @@ screens = [
                     background="#8FBCBB"),
                 widget.Wttr(
                     location={'Düsseldorf':'Düsseldorf'},
+                    format="%t(%f) | %C | %h",
                     background="#A3BE8C"
                 ),
                 widget.Clock(
                     format="%Y-%m-%d | %H:%M:%S",
                     background="#EBCB8B"
+                    ),
+                widget.ThermalSensor(
+                    show_tag=True,
+                    fmt="CPU Temp:{}",
+                    tag_sensor="Package id 0",
+                    background="#D08770"
                     ),
                 widget.QuickExit(
                     default_text='[🔥]',
@@ -229,11 +236,18 @@ screens = [
                     background="#8FBCBB"),
                 widget.Wttr(
                     location={'Düsseldorf':'Düsseldorf'},
+                    format="%t(%f) | %C | %h",
                     background="#A3BE8C"
                 ),
                 widget.Clock(
-                    format="%Y-%m-%d | %H:%M:%S | (%s)",
+                    format="%Y-%m-%d | %H:%M:%S",
                     background="#EBCB8B"
+                    ),
+                widget.ThermalSensor(
+                    show_tag=True,
+                    fmt="CPU Temp:{}",
+                    tag_sensor="Package id 0",
+                    background="#D08770"
                     ),
             ],
             30,
