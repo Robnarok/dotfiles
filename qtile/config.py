@@ -190,14 +190,14 @@ screens = [
                     format="%t(%f) | %C | %h",
                     background="#A3BE8C"
                 ),
-                widget.Clock(
-                    format="%Y-%m-%d | %H:%M:%S",
-                    background="#EBCB8B"
-                    ),
                 widget.ThermalSensor(
                     show_tag=True,
                     fmt="CPU Temp:{}",
                     tag_sensor="Package id 0",
+                    background="#EBCB8B"
+                    ),
+                widget.Clock(
+                    format="%Y-%m-%d | %H:%M:%S",
                     background="#D08770"
                     ),
                 widget.QuickExit(
@@ -225,7 +225,6 @@ screens = [
                     max_chars=25),
                 widget.Notify(
                     background="#B48EAD",
-                    foreground="#ffffff",
                     default_timeout=25,
                     max_chars=25),
                 widget.CPU(
@@ -237,14 +236,14 @@ screens = [
                     format="%t(%f) | %C | %h",
                     background="#A3BE8C"
                 ),
-                widget.Clock(
-                    format="%Y-%m-%d | %H:%M:%S",
-                    background="#EBCB8B"
-                    ),
                 widget.ThermalSensor(
                     show_tag=True,
                     fmt="CPU Temp:{}",
                     tag_sensor="Package id 0",
+                    background="#EBCB8B"
+                    ),
+                widget.Clock(
+                    format="%Y-%m-%d | %H:%M:%S",
                     background="#D08770"
                     ),
             ],
