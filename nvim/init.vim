@@ -12,6 +12,7 @@ Plug 'isobit/vim-caddyfile'
 Plug 'yaegassy/coc-ansible', {'do': 'yarn install --frozen-lockfile'}
 Plug 'dense-analysis/ale'
 Plug 'ap/vim-css-color'
+Plug 'tpope/vim-fugitive'
 call plug#end()
 " Beginn Colorscheme
 if has('termguicolors')
