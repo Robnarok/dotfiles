@@ -1,6 +1,7 @@
 call plug#begin()
 Plug 'fatih/vim-go'
 Plug 'SirVer/ultisnips'
+Plug 'zivyangll/git-blame.vim'
 Plug 'honza/vim-snippets'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'mboughaba/i3config.vim'
@@ -57,6 +58,10 @@ set expandtab
 inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
 inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
+
+" Git Blame
+nnoremap <C-s> :call gitblame#echo()<CR>
+
 
 let g:coc_filetype_map = {
   \ 'yaml.ansible': 'ansible',
