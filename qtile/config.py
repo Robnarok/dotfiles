@@ -72,6 +72,7 @@ keys = [
     # Toggle between different layouts as defined below
     Key([mod], "Tab", lazy.next_layout(), desc="Toggle between layouts"),
     Key([mod, "shift"] ,"c", lazy.window.kill(), desc="Kill focused window"),
+    Key([mod, "control"], "l", lazy.spawn ("i3lock"), desc="lock the screen"),
     Key([mod, "control"], "r", lazy.reload_config(), desc="Reload the config"),
     Key([mod, "control"], "0", lazy.spawn("xrandr --auto"),desc="xrandr Auto"),
     # Rofi Power Menu. Requires https://github.com/jluttine/rofi-power-menu
