@@ -14,8 +14,10 @@ plugins=(
     docker-compose
     git-open
     web-search
+    vi-mode
 )
 
+bindkey -v
 zstyle :omz:plugins:ssh-agent lazy yes
 source $ZSH/oh-my-zsh.sh
 
