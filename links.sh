@@ -28,3 +28,5 @@ ln -s $PWD/xmonad $HOME/.config/.
 #xmobar
 ln -s $PWD/xmobar $HOME/.config/.
 
+#dunst
+ln -s $PWD/dunst $HOME/.config/.
