@@ -143,6 +143,12 @@ layouts = [
         margin = 8,
         border_focus = '#BF616A',
         ),
+    layout.MonadWide(
+        font = "Hack Nerd Font",
+        fontsize = 12,
+        margin = 8,
+        border_focus = '#BF616A',
+        ),
     layout.Max(),
     # Try more layouts by unleashing below layouts.
     # layout.Stack(num_stacks=2),
