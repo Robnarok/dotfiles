@@ -181,10 +181,10 @@ screens = [
                 widget.Prompt(),
                 widget.WindowName(
                     max_chars=25),
-                widget.Notify(
-                    background="#B48EAD",
-                    default_timeout=5,
-                    max_chars=25),
+#                widget.Notify( 
+#                    background="#B48EAD",
+#                    default_timeout=5,
+#                    max_chars=25),
                 widget.CPU(
                     background="#81A1C1"),
                 widget.Memory(
@@ -227,10 +227,10 @@ screens = [
                 widget.Prompt(),
                 widget.WindowName(
                     max_chars=25),
-                widget.Notify(
-                    background="#B48EAD",
-                    default_timeout=25,
-                    max_chars=25),
+#                widget.Notify(
+#                    background="#B48EAD",
+#                    default_timeout=25,
+#                    max_chars=25),
                 widget.CPU(
                     background="#81A1C1"),
                 widget.Memory(
