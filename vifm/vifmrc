@@ -504,6 +504,22 @@ highlight Device      cterm=none,standout	ctermfg=110	ctermbg=default
 highlight Fifo        cterm=none	ctermfg=172	ctermbg=default
 highlight Socket      cterm=bold	ctermfg=223	ctermbg=default
 
+" yank current directory path into primary and selection clipboards
+nnoremap yd :!echo -n %d | xsel --input --primary %i &&
+            \ echo -n %d | xsel --clipboard --input %i<cr>:echo expand('%"d') "is yanked to clipboard"<cr>
+
+" yank current file path into primary and selection clipboards
+nnoremap yf :!echo -n %c:p | xsel --input --primary %i &&
+            \ echo -n %c:p | xsel --clipboard --input %i<cr>:echo expand('%"c:p') "is yanked to clipboard"<cr>
+
+" yank current filename without path into primary and selection clipboards
+nnoremap yn :!echo -n %c | xsel --input --primary %i &&
+            \ echo -n %c | xsel --clipboard --input %i<cr>:echo expand('%"c') "is yanked to clipboard"<cr>
+
+" yank root of current file's name into primary and selection clipboards
+nnoremap yr :!echo -n %c:r | xsel --input --primary %i &&
+            \ echo -n %c:r | xsel --clipboard --input %i<cr>:echo expand('%"c:r') "is yanked to clipboard"<cr>
+
 
 
 
