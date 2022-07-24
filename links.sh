@@ -30,3 +30,6 @@ ln -s $PWD/xmobar $HOME/.config/.
 
 #dunst
 ln -s $PWD/dunst $HOME/.config/.
+
+#vifm
+ln -s $PWD/vifm $HOME/.config/.

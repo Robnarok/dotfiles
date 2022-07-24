@@ -69,6 +69,9 @@ keys = [
         desc="Toggle between split and unsplit sides of stack",
     ),
     Key([mod], "Return", lazy.spawn(terminal), desc="Launch terminal"),
+    Key([mod, "shift"], "Return", lazy.spawn("alacritty -e vifm"),
+        desc="Launch filebrowser"),
+
     # Toggle between different layouts as defined below
     Key([mod], "Tab", lazy.next_layout(), desc="Toggle between layouts"),
     Key([mod, "shift"] ,"c", lazy.window.kill(), desc="Kill focused window"),
