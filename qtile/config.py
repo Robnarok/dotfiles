@@ -168,9 +168,10 @@ layouts = [
 widget_defaults = dict(
     font="Hack Nerd Font",
     fmt="{}",
-    fontsize=14,
+    fontsize=16,
     padding=8,
     background="#2e3440",
+    foreground="#2e3440",
 )
 extension_defaults = widget_defaults.copy()
 
@@ -179,18 +180,20 @@ screens = [
     Screen(
         top=bar.Bar(
             [
-                widget.CurrentLayout(),
+                widget.CurrentLayout(
+                    foreground="#ffffff",),
                 widget.GroupBox(
-                    hide_unused=True),
-                widget.WindowCount(
-                    foreground="#A3BE8C"),
-                widget.Prompt(),
+                    hide_unused=True,
+                    foreground="#ffffff"),
+                widget.Prompt(
+                    foreground="#ffffff"),
                 widget.WindowName(
+                    foreground="#ffffff",
                     max_chars=25),
-#                widget.Notify( 
-#                    background="#B48EAD",
-#                    default_timeout=5,
-#                    max_chars=25),
+                widget.WindowCount(
+                    fmt="WindowCount={}",
+                    background="#B48EAD",
+                    foreground="#2e3440"),
                 widget.CPU(
                     background="#81A1C1"),
                 widget.Memory(
@@ -225,18 +228,20 @@ screens = [
     Screen(
         top=bar.Bar(
             [
-                widget.CurrentLayout(),
+                widget.CurrentLayout(
+                    foreground="#ffffff",),
                 widget.GroupBox(
-                    hide_unused=True),
-                widget.WindowCount(
-                    foreground="#A3BE8C"),
-                widget.Prompt(),
+                    hide_unused=True,
+                    foreground="#ffffff"),
+                widget.Prompt(
+                    foreground="#ffffff"),
                 widget.WindowName(
+                    foreground="#ffffff",
                     max_chars=25),
-#                widget.Notify(
-#                    background="#B48EAD",
-#                    default_timeout=25,
-#                    max_chars=25),
+                widget.WindowCount(
+                    fmt="WindowCount={}",
+                    background="#B48EAD",
+                    foreground="#2e3440"),
                 widget.CPU(
                     background="#81A1C1"),
                 widget.Memory(
