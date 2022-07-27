@@ -183,8 +183,13 @@ screens = [
                 widget.CurrentLayout(
                     foreground="#ffffff",),
                 widget.GroupBox(
-                    hide_unused=True,
-                    foreground="#ffffff"),
+                    hide_unused=False,
+                    rounded=False,
+                    highlight_method='block',
+                    this_current_screen_border='#A3BE8C',
+                    this_screen_border='#81A1C1',
+                    other_current_screen_border='#EBCB8B',
+                    other_screen_border='#EBCB8B',),
                 widget.Prompt(
                     foreground="#ffffff"),
                 widget.WindowName(
@@ -200,7 +205,7 @@ screens = [
                     background="#8FBCBB"),
                 widget.Wttr(
                     location={'Düsseldorf':'Düsseldorf'},
-                    format="%t(%f) | %C | %h",
+                    format="%t(%f)",
                     background="#A3BE8C"
                 ),
                 widget.ThermalSensor(
@@ -231,8 +236,13 @@ screens = [
                 widget.CurrentLayout(
                     foreground="#ffffff",),
                 widget.GroupBox(
-                    hide_unused=True,
-                    foreground="#ffffff"),
+                    hide_unused=False,
+                    rounded=False,
+                    highlight_method='block',
+                    this_current_screen_border='#A3BE8C',
+                    this_screen_border='#81A1C1',
+                    other_current_screen_border='#EBCB8B',
+                    other_screen_border='#EBCB8B',),
                 widget.Prompt(
                     foreground="#ffffff"),
                 widget.WindowName(
@@ -248,7 +258,7 @@ screens = [
                     background="#8FBCBB"),
                 widget.Wttr(
                     location={'Düsseldorf':'Düsseldorf'},
-                    format="%t(%f) | %C | %h",
+                    format="%t(%f)",
                     background="#A3BE8C"
                 ),
                 widget.ThermalSensor(
