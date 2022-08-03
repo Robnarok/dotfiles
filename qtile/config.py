@@ -178,8 +178,6 @@ screens = [
         Screen(
             top=bar.Bar(
                 [
-                    widget.CurrentLayout(
-                        foreground="#ffffff",),
                     widget.GroupBox(
                         hide_unused=False,
                         rounded=False,
@@ -188,36 +186,34 @@ screens = [
                         this_screen_border='#81A1C1',
                         other_current_screen_border='#EBCB8B',
                         other_screen_border='#EBCB8B',),
-                    widget.Prompt(
-                        foreground="#ffffff"),
                     widget.WindowName(
                         foreground="#ffffff",
                         max_chars=25),
+                    widget.CurrentLayout(
+                        background="#B48EAD"),
                     widget.WindowCount(
-                        fmt="WindowCount={}",
-                        background="#B48EAD",
-                        foreground="#2e3440"),
+                        background="#B48EAD"),
                     widget.CPU(
                         background="#81A1C1"),
                     widget.Memory(
                         background="#8FBCBB"),
-                    widget.Wttr(
-                        location={'Düsseldorf':'Düsseldorf'},
-                        format="%t(%f)",
+                    widget.DF(
+                        max_chars=40,
+                        partition='/',
+                        visible_on_warn=False,
                         background="#A3BE8C"
                         ),
-                    widget.ThermalSensor(
-                        show_tag=True,
-                        fmt="CPU Temp:{}",
-                        tag_sensor="Package id 0",
+                    widget.OpenWeather(
+                        location="Düsseldorf",
+                        format='{location_city}: {main_temp}°{units_temperature}',
                         background="#EBCB8B"
                         ),
+                    widget.OpenWeather(
+                        location="Düsseldorf",
+                        format='{humidity}% {weather_details}',
+                        background="#D08770"),
                     widget.Clock(
                         format="%Y-%m-%d | %H:%M:%S",
-                        background="#D08770"
-                        ),
-                    widget.QuickExit(
-                        default_text='[🔥]',
                         background="#BF616A"),
                     widget.Volume(
                         emoji=True),
@@ -231,8 +227,6 @@ screens = [
     Screen(
             top=bar.Bar(
                 [
-                    widget.CurrentLayout(
-                        foreground="#ffffff",),
                     widget.GroupBox(
                         hide_unused=False,
                         rounded=False,
@@ -241,34 +235,35 @@ screens = [
                         this_screen_border='#81A1C1',
                         other_current_screen_border='#EBCB8B',
                         other_screen_border='#EBCB8B',),
-                    widget.Prompt(
-                        foreground="#ffffff"),
                     widget.WindowName(
                         foreground="#ffffff",
                         max_chars=25),
+                    widget.CurrentLayout(
+                        background="#B48EAD"),
                     widget.WindowCount(
-                        fmt="WindowCount={}",
-                        background="#B48EAD",
-                        foreground="#2e3440"),
+                        background="#B48EAD"),
                     widget.CPU(
                         background="#81A1C1"),
                     widget.Memory(
                         background="#8FBCBB"),
-                    widget.Wttr(
-                        location={'Düsseldorf':'Düsseldorf'},
-                        format="%t(%f)",
+                    widget.DF(
+                        max_chars=40,
+                        partition='/',
+                        visible_on_warn=False,
                         background="#A3BE8C"
                         ),
-                    widget.ThermalSensor(
-                        show_tag=True,
-                        fmt="CPU Temp:{}",
-                        tag_sensor="Package id 0",
+                    widget.OpenWeather(
+                        location="Düsseldorf",
+                        format='{location_city}: {main_temp}°{units_temperature}',
                         background="#EBCB8B"
                         ),
+                    widget.OpenWeather(
+                        location="Düsseldorf",
+                        format='{humidity}% {weather_details}',
+                        background="#D08770"),
                     widget.Clock(
                         format="%Y-%m-%d | %H:%M:%S",
-                        background="#D08770"
-                        ),
+                        background="#BF616A"),
                     ],
                 30,
                 opacity=0.90
