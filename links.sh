@@ -33,3 +33,12 @@ ln -s $PWD/dunst $HOME/.config/.
 
 #vifm
 ln -s $PWD/vifm $HOME/.config/.
+
+
+## Scripts
+
+#notes
+ln -s $PWD/scripts/* $HOME/.local/bin/.
+
+## Desktop Files
+ln -s $PWD/applications/* $HOME/.local/share/applications/.

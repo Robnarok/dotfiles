@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=Notes
+Comment=Note Taking App powered by vim
+Exec=alacritty -e  /opt/dotfiles/scripts/notes
+Terminal=false
+Type=Application
+StartupWMClass=notes
+TryExec=/opt/dotfiles/scripts/notes

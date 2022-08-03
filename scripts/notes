@@ -1,0 +1,6 @@
+#!/bin/bash
+date=$(date +%Y-%U)
+file=$HOME/Documents/Notes/$date.md
+
+touch $file
+nvim -n $file
