@@ -78,6 +78,10 @@ keys = [
         Key([mod, "control"], "l", lazy.spawn ("i3lock"), desc="lock the screen"),
         Key([mod, "control"], "r", lazy.reload_config(), desc="Reload the config"),
         Key([mod, "control"], "0", lazy.spawn("xrandr --auto"),desc="xrandr Auto"),
+
+
+        Key("","Print", lazy.spawn("gnome-screenshot -i"),desc="screenshot"),
+        Key([mod],"Print", lazy.spawn("peek"),desc="screencast"),
         # Rofi Power Menu. Requires https://github.com/jluttine/rofi-power-menu
         Key([mod, "control"], "q",
             lazy.spawn("rofi -show power-menu -modi power-menu:rofi-power-menu"),
