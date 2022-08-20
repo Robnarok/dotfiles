@@ -1,6 +1,12 @@
 require('keys')
 require('plugins')
 require('options')
+require('telescope')
+require('lua-line')
+require('tree')
+require('nvim-cmp')
+require('theme')
+
 --require('lsp')
 
 require("nvim-lsp-installer").setup {}
@@ -66,4 +72,8 @@ require'lspconfig'.sumneko_lua.setup {
   },
 }
 
+
+
 require("luasnip.loaders.from_vscode").lazy_load()
+
+require'colorizer'.setup()
