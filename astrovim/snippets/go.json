@@ -1,0 +1,6 @@
+{
+  "snip1": {
+    "prefix": "ef",
+    "body": ["if err != nil {", "\tfmt.ErroF(\"$1: %v\", err)", "}", "$2"]
+  }
+}
