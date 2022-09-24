@@ -26,7 +26,7 @@ local config = {
 
 	-- Set colorscheme to use
 
-	colorscheme = "nordfox",
+	colorscheme = "catppuccin",
 
 	-- Override highlight groups in any theme
 	highlights = {
@@ -40,7 +40,6 @@ local config = {
 			return highlights
 		end,
 	},
-
 	-- set vim options here (vim.<first_key>.<second_key> =  value)
 	options = {
 		opt = {
@@ -173,20 +172,16 @@ local config = {
 
 			-- You can disable default plugins as follows:
 			-- ["goolord/alpha-nvim"] = { disable = true },
-			{
-				"EdenEast/nightfox.nvim",
-				as = "nightfox",
-				config = function()
-					require("nightfox").setup({
-						options = {
-							transparent = true,
-						},
-					})
-				end,
-			},
-
 			-- You can also add new plugins here as well:
 			-- Add plugins, the packer syntax without the "use"
+			{
+				"catppuccin/nvim",
+				require("catppuccin").setup({
+					catppuccin_flavour = "frappe",
+					transparent_background = true,
+					term_colors = true,
+				}),
+			},
 			-- { "andweeb/presence.nvim" },
 			-- {
 			--   "ray-x/lsp_signature.nvim",
