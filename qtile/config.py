@@ -31,6 +31,14 @@ from libqtile import hook
 import subprocess
 import os
 
+dark='#292c3c'
+purple='#ca9ee6'
+blue='#8caaee'
+lightblue='#81c8be'
+green='#a6d189'
+yellow='#e5c890'
+orange='#ef9f76'
+red='#e78284'
 
 @hook.subscribe.startup_once
 def autostart():
@@ -143,13 +151,13 @@ layouts = [
             font="Hack Nerd Font",
             fontsize=12,
             margin=8,
-            border_focus='#BF616A',
+            border_focus=red,
             ),
         layout.MonadWide(
             font="Hack Nerd Font",
             fontsize=12,
             margin=8,
-            border_focus='#BF616A',
+            border_focus=red,
             ),
         layout.Max(),
         # Try more layouts by unleashing below layouts.
@@ -172,10 +180,12 @@ widget_defaults = dict(
         fmt="{}",
         fontsize=16,
         padding=8,
-        background="#2e3440",
-        foreground="#2e3440",
+        background=dark,
+        foreground=dark,
         )
 extension_defaults = widget_defaults.copy()
+
+
 
 screens = [
         # Monitor 0
@@ -186,39 +196,39 @@ screens = [
                         hide_unused=False,
                         rounded=False,
                         highlight_method='block',
-                        this_current_screen_border='#A3BE8C',
-                        this_screen_border='#81A1C1',
-                        other_current_screen_border='#EBCB8B',
-                        other_screen_border='#EBCB8B',),
+                        this_current_screen_border=green,
+                        this_screen_border=blue,
+                        other_current_screen_border=yellow,
+                        other_screen_border=yellow,),
                     widget.WindowName(
                         foreground="#ffffff",
                         max_chars=25),
                     widget.CurrentLayout(
-                        background="#B48EAD"),
+                        background=purple),
                     widget.WindowCount(
-                        background="#B48EAD"),
+                        background=purple),
                     widget.CPU(
-                        background="#81A1C1"),
+                        background=blue),
                     widget.Memory(
-                        background="#8FBCBB"),
+                        background=lightblue),
                     widget.DF(
                         max_chars=40,
                         partition='/',
                         visible_on_warn=False,
-                        background="#A3BE8C"
+                        background=green
                         ),
                     widget.OpenWeather(
                         location="Düsseldorf",
                         format='{location_city}: {main_temp}°{units_temperature}',
-                        background="#EBCB8B"
+                        background=yellow
                         ),
                     widget.OpenWeather(
                         location="Düsseldorf",
                         format='{humidity}% {weather_details}',
-                        background="#D08770"),
+                        background=orange),
                     widget.Clock(
                         format="%Y-%m-%d | %H:%M:%S",
-                        background="#BF616A"),
+                        background=red),
                     widget.Volume(
                         emoji=True),
                     widget.Systray(),
@@ -235,39 +245,39 @@ screens = [
                         hide_unused=False,
                         rounded=False,
                         highlight_method='block',
-                        this_current_screen_border='#A3BE8C',
-                        this_screen_border='#81A1C1',
-                        other_current_screen_border='#EBCB8B',
-                        other_screen_border='#EBCB8B',),
+                        this_current_screen_border=green,
+                        this_screen_border=blue,
+                        other_current_screen_border=yellow,
+                        other_screen_border=yellow,),
                     widget.WindowName(
                         foreground="#ffffff",
                         max_chars=25),
                     widget.CurrentLayout(
-                        background="#B48EAD"),
+                        background=purple),
                     widget.WindowCount(
-                        background="#B48EAD"),
+                        background=purple),
                     widget.CPU(
-                        background="#81A1C1"),
+                        background=blue),
                     widget.Memory(
-                        background="#8FBCBB"),
+                        background=lightblue),
                     widget.DF(
                         max_chars=40,
                         partition='/',
                         visible_on_warn=False,
-                        background="#A3BE8C"
+                        background=green
                         ),
                     widget.OpenWeather(
                         location="Düsseldorf",
                         format='{location_city}: {main_temp}°{units_temperature}',
-                        background="#EBCB8B"
+                        background=yellow
                         ),
                     widget.OpenWeather(
                         location="Düsseldorf",
                         format='{humidity}% {weather_details}',
-                        background="#D08770"),
+                        background=orange),
                     widget.Clock(
                         format="%Y-%m-%d | %H:%M:%S",
-                        background="#BF616A"),
+                        background=red),
                     ],
                 30,
                 opacity=0.90
